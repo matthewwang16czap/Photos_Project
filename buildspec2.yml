@@ -2,15 +2,24 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.10
+      python: 3.9
     commands:
       - echo "Installing dependencies..."
   build:
     commands:
       # - zip -r9 ../deployment_package.zip .
       - zip -g -j deployment_package.zip lambda_functions/HelloWorld/lambda_function.py
+      - zip -g -j deployment_package1.zip lambda_functions/SearchIntent_function/lambda_function.py
+      - zip -g -j deployment_package2.zip lambda_functions/Photo_FallBack_Indent/lambda_function.py
+      - zip -g -j deployment_package3.zip lambda_functions/index-photos/lambda_function.py
+      - zip -g -j deployment_package4.zip lambda_functions/search_photos/lambda_function.py
+      
   post_build:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name HelloWorld --zip-file fileb://deployment_package.zip
+      - aws lambda update-function-code --function-name SearchIntent_function --zip-file fileb://deployment_package1.zip
+      - aws lambda update-function-code --function-name Photo_FallBack_Indent --zip-file fileb://deployment_package2.zip
+      - aws lambda update-function-code --function-name index-photos --zip-file fileb://deployment_package3.zip
+      - aws lambda update-function-code --function-name search_photos --zip-file fileb://deployment_package4.zip
       - echo "DONE!!"

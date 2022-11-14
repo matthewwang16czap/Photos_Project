@@ -5,6 +5,7 @@ from requests.auth import HTTPBasicAuth
 
 
 def lambda_handler(event, context):
+
     client = boto3.client('lex-runtime')
     user_id = "114514"
     # q = 'show me photos with sky and building in them'

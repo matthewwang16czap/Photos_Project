@@ -1,0 +1,1429 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  FullRepoName:
+    Type: String
+    Default: matthewwang16czap/Photos_Project
+    Description: >-
+      Enter the github full repository name. Default:
+      matthewwang16czap/Photos_Project
+  SettingUserName:
+    Type: String
+    Default: rootuser
+    Description: >-
+      Enter username for possible deployment service such as ElasticSearch.
+      Default: rootuser
+  SettingPassWord:
+    Type: String
+    Default: Cookie114514*
+    Description: >-
+      Enter password for possible deployment service such as ElasticSearch.
+      Default: Cookie114514*
+Metadata:
+  'AWS::CloudFormation::Designer':
+    cfeda674-c2c4-4919-962c-3ccf3119fc06:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 110
+        'y': 70
+      z: 1
+      embeds: []
+    7a23bedd-069d-4c72-9477-1dc215114b73:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 220
+        'y': 270
+      z: 1
+      embeds: []
+    9d4ecfae-670c-4324-9f4b-73c8ebae7123:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 390
+        'y': 90
+      z: 1
+      embeds: []
+    4a013f13-81ad-4e33-8c34-b9a2b112badf:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 270
+      z: 1
+      embeds: []
+    97d9038c-51e8-4b58-ab77-bb75ae3a8459:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 210
+        'y': 90
+      z: 1
+      embeds: []
+    28072437-22ae-4dd3-8c7b-f4ebf2ba172f:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -90
+        'y': 70
+      z: 1
+      embeds: []
+    1642bfe4-bd34-42b5-b1c4-29ab1b1c5979:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 300
+        'y': 90
+      z: 1
+      embeds: []
+    1980715d-f1bd-4040-ab15-6e2390bb9d8e:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 240
+        'y': 170
+      z: 1
+      embeds: []
+    0cdcf634-793d-4414-b16e-e898ea984e7a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -100
+        'y': 190
+      z: 1
+      embeds: []
+      dependson:
+        - 28072437-22ae-4dd3-8c7b-f4ebf2ba172f
+    5d24e3ff-d585-4776-ac43-9860801093cb:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -20
+        'y': 70
+      z: 1
+      embeds: []
+    4f735c41-fcb0-41b0-b527-5df037750caf:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -20
+        'y': 190
+      z: 0
+      embeds: []
+    f6e56bbb-10d7-47be-b7c1-84ce7ceba385:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -30
+        'y': 280
+      z: 0
+      embeds: []
+    b77db978-28d1-48d7-9845-eb182d17c9d9:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -170
+        'y': 240
+      z: 0
+      embeds: []
+    9b10fd41-9d5c-47b8-a466-28085d702422:
+      size:
+        width: 140
+        height: 140
+      position:
+        x: -340
+        'y': 20
+      z: 0
+      embeds: []
+    60657df0-3490-453e-b34e-c7fa693964c4:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -250
+        'y': -80
+      z: 0
+      embeds: []
+    af1b813c-0faa-4573-aeb3-510a5d73fb29:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -140
+        'y': -100
+      z: 0
+      embeds: []
+      dependson:
+        - 9b10fd41-9d5c-47b8-a466-28085d702422
+        - eba035ad-4875-492a-8b65-f6cc2145a369
+        - 7a23bedd-069d-4c72-9477-1dc215114b73
+        - 97d9038c-51e8-4b58-ab77-bb75ae3a8459
+    eba035ad-4875-492a-8b65-f6cc2145a369:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -240
+        'y': -190
+      z: 0
+      embeds: []
+    6b9e62d0-a144-4e94-8ac1-9a1a7084bb9a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 80
+        'y': -130
+      z: 0
+      embeds: []
+    2d340b4b-83d6-449f-9278-548deb47fce3:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 150
+        'y': -120
+      z: 0
+      embeds: []
+    1fa91426-29ac-4a24-a897-3d7c84368d00:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 380
+        'y': -260
+      z: 0
+      embeds: []
+    dddd889d-6494-4c64-843d-a5dc73fe0e7c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 380
+        'y': -160
+      z: 0
+      embeds: []
+    df679833-1038-45b4-977d-6b3ea4f7b53f:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 170
+        'y': -240
+      z: 0
+      embeds: []
+    1ce2abf6-d93b-475d-a168-d766a110002c:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 260
+        'y': -140
+      z: 0
+      embeds: []
+    3514e8f9-85f4-42f1-8d33-bf4ece963a16:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 354.9912378688149
+        'y': -64.56062540980069
+      z: 0
+      embeds: []
+      dependson:
+        - dddd889d-6494-4c64-843d-a5dc73fe0e7c
+    870ea8d4-1eb9-42ac-a45c-1687fa22b08e:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 340
+        'y': 170
+      z: 0
+      embeds: []
+Resources:
+  StorePhotos:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: sihan-photos-store
+      AccessControl: PublicReadWrite
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: cfeda674-c2c4-4919-962c-3ccf3119fc06
+    DeletionPolicy: Delete
+  FrontEnd:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: sihan-photos-front-end
+      AccessControl: PublicReadWrite
+      WebsiteConfiguration:
+        ErrorDocument: index.html
+        IndexDocument: index.html
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9d4ecfae-670c-4324-9f4b-73c8ebae7123
+    DeletionPolicy: Delete
+  IndexPhotos:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: index-photos
+      Runtime: python3.9
+      MemorySize: 512
+      Timeout: 120
+      Handler: index.lambda_handler
+      Environment:
+        Variables:
+          SettingUserName: !Ref SettingUserName
+          SettingPassWord: !Ref SettingPassWord
+          EndPointHost: !GetAtt 
+            - ElasticSearchPhotos
+            - DomainEndpoint
+      Role: !GetAtt 
+        - IndexPhotosRole
+        - Arn
+      Layers:
+        - 'arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p38-requests:7'
+      Code:
+        ZipFile: |
+          #!/usr/bin/env python3  
+          import boto3
+          from decimal import Decimal
+          import json
+          import urllib.request
+          import urllib.parse
+          import urllib.error
+          import requests
+          from requests.auth import HTTPBasicAuth
+
+          rekognition = boto3.client('rekognition')
+          s3 = boto3.client('s3')
+
+          def detect_labels(bucket, key):
+              response = rekognition.detect_labels(Image={"S3Object": {"Bucket": bucket, "Name": key}})
+              return response
+
+          def get_labels(response):
+              labels = []
+              for l in response['Labels']:
+                  labels.append(l['Name'])
+              return labels
+            
+          # --------------- Main handler ------------------
+
+          def lambda_handler(event, context):
+              # print("Received event: " + json.dumps(event, indent=2))
+
+              # Get the object from the event
+              bucket = event['Records'][0]['s3']['bucket']['name']
+              key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'])
+              try:
+                  # Calls rekognition DetectLabels API to detect labels in S3 object
+                  response = detect_labels(bucket, key)
+              except Exception as e:
+                  print(e)
+                  print("Error processing object {} from bucket {}. ".format(key, bucket) +
+                      "Make sure your object and bucket exist and your bucket is in the same region as this function.")
+                  raise e
+              labels = get_labels(response)
+              # add custom labels
+              s3_cli = boto3.client('s3')
+              object_summary = s3_cli.head_object(
+                  Bucket=bucket,
+                  Key=key,
+              )
+              if 'x-amz-meta-customlabels' in object_summary['ResponseMetadata']['HTTPHeaders'].keys():
+                  custom_labels = object_summary['ResponseMetadata']['HTTPHeaders']['x-amz-meta-customlabels'].split(", ")
+                  labels = labels + custom_labels
+
+              photo_info = {
+                  'objectKey': key,
+                  'bucket': bucket,
+                  'createdTimestamp': event['Records'][0]['eventTime'],
+                  'labels': labels
+              }
+              es_key = key.replace("images/", "")
+              # insert photo_info to es
+              es_index = 'photos'
+              host = os.environ['EndPointHost']
+              url = host + '/' + es_index + '/_doc/' + es_key
+              headers = {"Content-Type": "application/json"}
+              r = requests.put(url, auth=HTTPBasicAuth(os.environ['SettingUserName'], os.environ['SettingPassWord']), headers=headers, data=json.dumps(photo_info))
+              result = json.loads(r.content)
+              return result
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 7a23bedd-069d-4c72-9477-1dc215114b73
+    DependsOn:
+      - ElasticSearchPhotos
+    DeletionPolicy: Delete
+  IndexPhotosRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+          Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/AmazonOpenSearchServiceFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonRekognitionFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonS3FullAccess'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 4a013f13-81ad-4e33-8c34-b9a2b112badf
+    DeletionPolicy: Delete
+  SearchPhotos:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: search-photos
+      Runtime: python3.9
+      MemorySize: 128
+      Timeout: 30
+      Handler: index.lambda_handler
+      Environment:
+        Variables:
+          SettingUserName: !Ref SettingUserName
+          SettingPassWord: !Ref SettingPassWord
+          EndPointHost: !GetAtt 
+            - ElasticSearchPhotos
+            - DomainEndpoint
+      Role: !GetAtt 
+        - SearchPhotosRole
+        - Arn
+      Layers:
+        - 'arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p38-requests:7'
+      Code:
+        ZipFile: |
+          import json
+          import boto3
+          import requests
+          from requests.auth import HTTPBasicAuth
+
+          def query_to_keywords(query):
+              keywords = []
+              if "show me" in query:
+                  words = query.replace(', ', ' ')
+                  word_lists = words.split(' ')
+                  if "and" in query:
+                      and_index = word_lists.index("and")
+                      keywords.append(word_lists[and_index-1])
+                      keywords.append(word_lists[and_index+1])
+                  else:
+                      keywords.append(word_lists[-1])
+              else:
+                  word_lists = query.split(', ')
+                  keywords = word_lists
+              return keywords
+
+          def lambda_handler(event, context):
+              client = boto3.client('lex-runtime')
+              user_id = "114514"
+              q = event['multiValueQueryStringParameters']['q'][0]
+              response = client.post_text(
+                  botName='Photo_Bot',
+                  botAlias='v_a',
+                  userId=user_id,
+                  inputText=q,
+              )
+
+              keywords = query_to_keywords(q)
+              # if does have key, go to es
+              if len(keywords) != 0:
+                  host = os.environ['EndPointHost']
+                  index = 'photos'
+                  url = host + '/' + index + '/_search'
+
+                  # or query
+                  query = {
+                      "query": {
+                          "bool": {
+                              "should": []
+                          }
+                      }
+                  }
+
+                  for i in keywords:
+                      match_cond = {
+                          "match": {
+                              "labels": i
+                          }
+                      }
+                      query['query']['bool']['should'].append(match_cond)
+
+                  headers = {"Content-Type": "application/json"}
+                  r = requests.get(url, auth=HTTPBasicAuth(os.environ['SettingUserName'], os.environ['SettingPassWord']), headers=headers, data=json.dumps(query))
+                  query_result = json.loads(r.content)
+                  result_photos = query_result['hits']['hits']
+                  return_message = []
+                  for photo in result_photos:
+                      photo_info = {
+                          "_id": photo["_id"],
+                          "createdTimestamp": photo["_source"]["createdTimestamp"]
+                      }
+                      return_message.append(photo_info)
+
+              else:
+                  return_message = []
+              return {
+                  'statusCode': 200,
+                  'headers': {
+                      'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                      'Access-Control-Allow-Origin': '*',
+                      'Access-Control-Allow-Methods': 'OPTIONS,POST'
+                  },
+                  'body': json.dumps(return_message)
+              }
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 97d9038c-51e8-4b58-ab77-bb75ae3a8459
+    DependsOn:
+      - ElasticSearchPhotos
+    DeletionPolicy: Delete
+  SearchPhotosRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+          Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/AmazonLexFullAccess'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1642bfe4-bd34-42b5-b1c4-29ab1b1c5979
+    DeletionPolicy: Delete
+  ElasticSearchPhotos:
+    Type: 'AWS::OpenSearchService::Domain'
+    Properties:
+      DomainName: es-photos
+      NodeToNodeEncryptionOptions:
+        Enabled: true
+      AdvancedSecurityOptions:
+        Enabled: true
+        InternalUserDatabaseEnabled: true
+        MasterUserOptions:
+          MasterUserName: !Ref SettingUserName
+          MasterUserPassword: !Ref SettingPassWord
+      ClusterConfig:
+        DedicatedMasterEnabled: false
+        InstanceCount: 1
+        InstanceType: t3.small.search
+        WarmEnabled: false
+        ZoneAwarenessEnabled: false
+      EBSOptions:
+        EBSEnabled: true
+        Iops: 3000
+        Throughput: 125
+        VolumeSize: 10
+        VolumeType: gp3
+      EngineVersion: Elasticsearch_7.10
+      EncryptionAtRestOptions:
+        Enabled: true
+        KmsKeyId: !Ref ESKey
+      DomainEndpointOptions:
+        EnforceHTTPS: true
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1980715d-f1bd-4040-ab15-6e2390bb9d8e
+    DeletionPolicy: Delete
+    DependsOn:
+      - ESKey
+  PhotosBot:
+    Type: 'AWS::Lex::Bot'
+    Properties:
+      Name: PhotoBot
+      RoleArn: !GetAtt 
+        - BotRole
+        - Arn
+      DataPrivacy:
+        ChildDirected: false
+      IdleSessionTTLInSeconds: 300
+      Description: For Photos Project
+      AutoBuildBotLocales: false
+      BotLocales:
+        - LocaleId: en_US
+          Description: For Photos Project
+          NluConfidenceThreshold: 0.4
+          VoiceSettings:
+            VoiceId: Ivy
+          SlotTypes:
+            - Name: Query
+              Description: Store a query
+              SlotTypeValues:
+                - SampleValue:
+                    Value: YBYBYBBABO
+              ValueSelectionSetting:
+                ResolutionStrategy: ORIGINAL_VALUE
+          Intents:
+            - Name: QueryIntent
+              Description: Intent to get a query
+              SampleUtterances:
+                - Utterance: show me trees and flowers
+              FulfillmentCodeHook:
+                Enabled: true
+              Slots:
+                - Name: MyQuery
+                  Description: something
+                  SlotTypeName: Query
+                  ValueElicitationSetting:
+                    SlotConstraint: Optional
+                    PromptSpecification:
+                      MessageGroupsList:
+                        - Message:
+                            PlainTextMessage:
+                              Value: What type of flowers would you like to order?
+                      MaxRetries: 3
+                      AllowInterrupt: true
+              SlotPriorities:
+                - Priority: 1
+                  SlotName: MyQuery
+            - Name: FallbackIntent
+              Description: Default intent when no other intent matches
+              ParentIntentSignature: AMAZON.FallbackIntent
+              FulfillmentCodeHook:
+                Enabled: true
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 0cdcf634-793d-4414-b16e-e898ea984e7a
+    DependsOn:
+      - FallBackIndentFunction
+    DeletionPolicy: Delete
+  FallBackIndentRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 5d24e3ff-d585-4776-ac43-9860801093cb
+    DeletionPolicy: Delete
+  BotRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lexv2.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'polly:SynthesizeSpeech'
+                Resource:
+                  - '*'
+              - Effect: Allow
+                Action:
+                  - 'comprehend:DetectSentiment'
+                Resource:
+                  - '*'
+          PolicyName: PhotoBotPolicy
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 4f735c41-fcb0-41b0-b527-5df037750caf
+    DeletionPolicy: Delete
+  PhotosBotVersion:
+    Type: 'AWS::Lex::BotVersion'
+    Properties:
+      BotId: !Ref PhotosBot
+      BotVersionLocaleSpecification:
+        - LocaleId: en_US
+          BotVersionLocaleDetails:
+            SourceBotVersion: DRAFT
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: f6e56bbb-10d7-47be-b7c1-84ce7ceba385
+    DependsOn:
+      - PhotosBot
+    DeletionPolicy: Delete
+  PhotosBotAlias:
+    Type: 'AWS::Lex::BotAlias'
+    Properties:
+      BotId: !Ref PhotosBot
+      BotAliasName: PhotosBotAlias
+      BotVersion: !GetAtt 
+        - PhotosBotVersion
+        - BotVersion
+      SentimentAnalysisSettings:
+        DetectSentiment: true
+      BotAliasLocaleSettings:
+        - LocaleId: en_US
+          BotAliasLocaleSetting:
+            Enabled: true
+            CodeHookSpecification:
+              LambdaCodeHook:
+                LambdaArn: !GetAtt 
+                  - FallBackIndentFunction
+                  - Arn
+                CodeHookInterfaceVersion: '1.0'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: b77db978-28d1-48d7-9845-eb182d17c9d9
+    DependsOn:
+      - PhotosBot
+      - FallBackIndentFunction
+    DeletionPolicy: Delete
+  PhotosAPIGateway:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: AI Photo Search
+      Description: AI Photo Search application
+      Body:
+        swagger: '2.0'
+        info:
+          description: >-
+            AI Photo Search application, built during the Cloud and Big Data
+            course at Columbia University.
+          version: 1.0.0
+          title: AI Photo Search
+        schemes:
+          - https
+        paths:
+          /search:
+            get:
+              operationId: searchPhotos
+              produces:
+                - application/json
+              parameters:
+                - name: q
+                  in: query
+                  required: false
+                  type: string
+              responses:
+                '200':
+                  description: 200 response
+                  schema:
+                    $ref: '#/definitions/SearchResponse'
+                  headers:
+                    Access-Control-Allow-Origin:
+                      type: string
+                '403':
+                  description: 403 response
+                  schema:
+                    $ref: '#/definitions/Error'
+                '500':
+                  description: 500 response
+                  schema:
+                    $ref: '#/definitions/Error'
+              x-amazon-apigateway-integration:
+                type: aws_proxy
+                httpMethod: POST
+                uri: !Sub 
+                  - >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${lambdaArn}/invocations
+                  - lambdaArn: !GetAtt 
+                      - SearchPhotos
+                      - Arn
+                responses:
+                  default:
+                    statusCode: '200'
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                passthroughBehavior: when_no_match
+                contentHandling: CONVERT_TO_TEXT
+            options:
+              consumes:
+                - application/json
+              responses:
+                '200':
+                  description: 200 response
+                  headers:
+                    Access-Control-Allow-Origin:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Headers:
+                      type: string
+              x-amazon-apigateway-integration:
+                type: mock
+                responses:
+                  default:
+                    statusCode: '200'
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Methods: '''GET,OPTIONS'''
+                      method.response.header.Access-Control-Allow-Headers: >-
+                        'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                requestTemplates:
+                  application/json: '{"statusCode": 200}'
+                passthroughBehavior: when_no_match
+          '/upload/{folder}/{subfolder}/{item}':
+            put:
+              parameters:
+                - name: Content-Type
+                  in: header
+                  required: false
+                  type: string
+                - name: item
+                  in: path
+                  required: true
+                  type: string
+                - name: x-amz-meta-customLabels
+                  in: header
+                  required: false
+                  type: string
+                - name: subfolder
+                  in: path
+                  required: true
+                  type: string
+                - name: folder
+                  in: path
+                  required: true
+                  type: string
+              responses:
+                '200':
+                  description: 200 response
+                  headers:
+                    Access-Control-Allow-Origin:
+                      type: string
+              x-amazon-apigateway-integration:
+                type: aws
+                credentials: !GetAtt 
+                  - APIPutS3Role
+                  - Arn
+                httpMethod: PUT
+                uri: >-
+                  arn:aws:apigateway:${AWS::Region}:s3:path/{bucket}/{itempath}/{object}
+                responses:
+                  default:
+                    statusCode: '200'
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                requestParameters:
+                  integration.request.path.object: method.request.path.item
+                  integration.request.path.itempath: method.request.path.subfolder
+                  integration.request.header.x-amz-meta-customLabels: method.request.header.x-amz-meta-customLabels
+                  integration.request.path.bucket: method.request.path.folder
+                  integration.request.header.Content-Type: method.request.header.Content-Type
+                passthroughBehavior: when_no_match
+            options:
+              consumes:
+                - application/json
+              parameters:
+                - name: folder
+                  in: path
+                  required: true
+                  type: string
+                - name: subfolder
+                  in: path
+                  required: true
+                  type: string
+                - name: item
+                  in: path
+                  required: true
+                  type: string
+              responses:
+                '200':
+                  description: 200 response
+                  headers:
+                    Access-Control-Allow-Origin:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Headers:
+                      type: string
+              x-amazon-apigateway-integration:
+                type: mock
+                responses:
+                  default:
+                    statusCode: '200'
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Methods: '''OPTIONS,PUT'''
+                      method.response.header.Access-Control-Allow-Headers: >-
+                        'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                requestTemplates:
+                  application/json: '{"statusCode": 200}'
+                passthroughBehavior: when_no_match
+        definitions:
+          Error:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+          Photo:
+            type: object
+            properties:
+              url:
+                type: string
+              labels:
+                type: array
+                items:
+                  type: string
+          SearchResponse:
+            type: object
+            properties:
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Photo'
+        x-amazon-apigateway-gateway-responses:
+          DEFAULT_4XX:
+            responseParameters:
+              gatewayresponse.header.Access-Control-Allow-Methods: '''OPTIONS,PUT'''
+              gatewayresponse.header.Access-Control-Allow-Origin: '''*'''
+              gatewayresponse.header.Access-Control-Allow-Headers: >-
+                'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
+          DEFAULT_5XX:
+            responseParameters:
+              gatewayresponse.header.Access-Control-Allow-Methods: '''OPTIONS,PUT'''
+              gatewayresponse.header.Access-Control-Allow-Origin: '''*'''
+              gatewayresponse.header.Access-Control-Allow-Headers: >-
+                'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
+        x-amazon-apigateway-binary-media-types:
+          - '*/*'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 9b10fd41-9d5c-47b8-a466-28085d702422
+    DependsOn:
+      - APIPutS3Role
+      - SearchPhotos
+    DeletionPolicy: Delete
+  APIPutS3Role:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service:
+              - apigateway.amazonaws.com
+              - lambda.amazonaws.com
+          Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/AmazonS3FullAccess'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 60657df0-3490-453e-b34e-c7fa693964c4
+    DeletionPolicy: Delete
+  lambdaApiGatewayInvoke:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      Principal: apigateway.amazonaws.com
+      FunctionName: !GetAtt 
+        - SearchPhotos
+        - Arn
+      SourceArn: !Sub >-
+        arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${PhotosAPIGateway}/PhotoProject/POST/search
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: af1b813c-0faa-4573-aeb3-510a5d73fb29
+    DependsOn:
+      - PhotosAPIGateway
+      - APIGatewayDeployment
+      - SearchPhotos
+    DeletionPolicy: Delete
+  APIGatewayDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref PhotosAPIGateway
+      StageName: PhotoProject
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: eba035ad-4875-492a-8b65-f6cc2145a369
+    DependsOn:
+      - PhotosAPIGateway
+    DeletionPolicy: Delete
+  CodePipelineBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: sihan-codepipeline-bucket
+      AccessControl: PublicReadWrite
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 6b9e62d0-a144-4e94-8ac1-9a1a7084bb9a
+    DeletionPolicy: Delete
+  CodePipelineRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: codepipeline.amazonaws.com
+          Action: 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyDocument:
+            Statement:
+              - Action:
+                  - 'iam:PassRole'
+                Resource: '*'
+                Effect: Allow
+                Condition:
+                  StringEqualsIfExists:
+                    'iam:PassedToService':
+                      - cloudformation.amazonaws.com
+                      - elasticbeanstalk.amazonaws.com
+                      - ec2.amazonaws.com
+                      - ecs-tasks.amazonaws.com
+              - Action:
+                  - 'codecommit:CancelUploadArchive'
+                  - 'codecommit:GetBranch'
+                  - 'codecommit:GetCommit'
+                  - 'codecommit:GetRepository'
+                  - 'codecommit:GetUploadArchiveStatus'
+                  - 'codecommit:UploadArchive'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'codedeploy:CreateDeployment'
+                  - 'codedeploy:GetApplication'
+                  - 'codedeploy:GetApplicationRevision'
+                  - 'codedeploy:GetDeployment'
+                  - 'codedeploy:GetDeploymentConfig'
+                  - 'codedeploy:RegisterApplicationRevision'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'codestar-connections:*'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'elasticbeanstalk:*'
+                  - 'ec2:*'
+                  - 'elasticloadbalancing:*'
+                  - 'autoscaling:*'
+                  - 'cloudwatch:*'
+                  - 's3:*'
+                  - 'sns:*'
+                  - 'cloudformation:*'
+                  - 'rds:*'
+                  - 'sqs:*'
+                  - 'ecs:*'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'lambda:*'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'opsworks:CreateDeployment'
+                  - 'opsworks:DescribeApps'
+                  - 'opsworks:DescribeCommands'
+                  - 'opsworks:DescribeDeployments'
+                  - 'opsworks:DescribeInstances'
+                  - 'opsworks:DescribeStacks'
+                  - 'opsworks:UpdateApp'
+                  - 'opsworks:UpdateStack'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'cloudformation:CreateStack'
+                  - 'cloudformation:DeleteStack'
+                  - 'cloudformation:DescribeStacks'
+                  - 'cloudformation:UpdateStack'
+                  - 'cloudformation:CreateChangeSet'
+                  - 'cloudformation:DeleteChangeSet'
+                  - 'cloudformation:DescribeChangeSet'
+                  - 'cloudformation:ExecuteChangeSet'
+                  - 'cloudformation:SetStackPolicy'
+                  - 'cloudformation:ValidateTemplate'
+                Resource: '*'
+                Effect: Allow
+              - Action:
+                  - 'codebuild:BatchGetBuilds'
+                  - 'codebuild:StartBuild'
+                  - 'codebuild:BatchGetBuildBatches'
+                  - 'codebuild:StartBuildBatch'
+                Resource: '*'
+                Effect: Allow
+              - Effect: Allow
+                Action:
+                  - 'devicefarm:ListProjects'
+                  - 'devicefarm:ListDevicePools'
+                  - 'devicefarm:GetRun'
+                  - 'devicefarm:GetUpload'
+                  - 'devicefarm:CreateUpload'
+                  - 'devicefarm:ScheduleRun'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'servicecatalog:ListProvisioningArtifacts'
+                  - 'servicecatalog:CreateProvisioningArtifact'
+                  - 'servicecatalog:DescribeProvisioningArtifact'
+                  - 'servicecatalog:DeleteProvisioningArtifact'
+                  - 'servicecatalog:UpdateProduct'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'cloudformation:ValidateTemplate'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'ecr:DescribeImages'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'states:DescribeExecution'
+                  - 'states:DescribeStateMachine'
+                  - 'states:StartExecution'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'appconfig:StartDeployment'
+                  - 'appconfig:StopDeployment'
+                  - 'appconfig:GetDeployment'
+                Resource: '*'
+            Version: 2012-10-17
+          PolicyName: CodePipelinePolicy
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 2d340b4b-83d6-449f-9278-548deb47fce3
+    DeletionPolicy: Delete
+  CodeBuildRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: codebuild.amazonaws.com
+          Action: 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Resource:
+                  - '*'
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+              - Effect: Allow
+                Resource:
+                  - '*'
+                Action:
+                  - 's3:*'
+                  - 'lambda:*'
+              - Effect: Allow
+                Action:
+                  - 'codebuild:CreateReportGroup'
+                  - 'codebuild:CreateReport'
+                  - 'codebuild:UpdateReport'
+                  - 'codebuild:BatchPutTestCases'
+                  - 'codebuild:BatchPutCodeCoverages'
+                Resource:
+                  - '*'
+          PolicyName: CodeBuildRoleForPipeline
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1fa91426-29ac-4a24-a897-3d7c84368d00
+    DeletionPolicy: Delete
+  CodeBuildProject:
+    Type: 'AWS::CodeBuild::Project'
+    Properties:
+      Name: BuildProjectForPipeline
+      Description: A build for p1
+      Artifacts:
+        Type: CODEPIPELINE
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: buildspec2.yml
+        GitCloneDepth: 0
+      ServiceRole: !GetAtt 
+        - CodeBuildRole
+        - Arn
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: 'aws/codebuild/standard:6.0'
+        Type: LINUX_CONTAINER
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: dddd889d-6494-4c64-843d-a5dc73fe0e7c
+    DependsOn:
+      - CodeBuildRole
+    DeletionPolicy: Delete
+  p2:
+    Type: 'AWS::CodePipeline::Pipeline'
+    Properties:
+      Name: p2
+      RoleArn: !GetAtt 
+        - CodePipelineRole
+        - Arn
+      ArtifactStore:
+        Type: S3
+        Location: !Ref CodePipelineBucket
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: SourceAction
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: CodeStarSourceConnection
+              OutputArtifacts:
+                - Name: SourceArtifact
+              Configuration:
+                ConnectionArn: !Ref GitHubConn
+                FullRepositoryId: matthewwang16czap/Photos_Project
+                BranchName: main
+                DetectChanges: true
+              RunOrder: 1
+        - Name: Deploy
+          Actions:
+            - Name: DeployAction
+              InputArtifacts:
+                - Name: SourceArtifact
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: '1'
+                Provider: S3
+              Configuration:
+                BucketName: !Ref FrontEnd
+                Extract: true
+              RunOrder: 1
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: df679833-1038-45b4-977d-6b3ea4f7b53f
+    DeletionPolicy: Delete
+    DependsOn:
+      - CodePipelineRole
+      - GitHubConn
+      - CodePipelineBucket
+      - FrontEnd
+  GitHubConn:
+    Type: 'AWS::CodeStarConnections::Connection'
+    Properties:
+      ConnectionName: GitHubConn
+      ProviderType: GitHub
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1ce2abf6-d93b-475d-a168-d766a110002c
+    DeletionPolicy: Delete
+  p1:
+    Type: 'AWS::CodePipeline::Pipeline'
+    Properties:
+      Name: p1
+      RoleArn: !GetAtt 
+        - CodePipelineRole
+        - Arn
+      ArtifactStore:
+        Type: S3
+        Location: !Ref CodePipelineBucket
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: SourceAction
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: CodeStarSourceConnection
+              OutputArtifacts:
+                - Name: SourceArtifact
+              Configuration:
+                ConnectionArn: !Ref GitHubConn
+                FullRepositoryId: !Ref FullRepoName
+                BranchName: main
+                DetectChanges: true
+              RunOrder: 1
+        - Name: Build
+          Actions:
+            - Name: BuildAction
+              Namespace: BuildVariables
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Provider: CodeBuild
+                Version: '1'
+              RunOrder: 1
+              Configuration:
+                BatchEnabled: false
+                CombineArtifacts: false
+                ProjectName: BuildProjectForPipeline
+              OutputArtifacts:
+                - Name: BuildArtifact
+              InputArtifacts:
+                - Name: SourceArtifact
+        - Name: Approval
+          Actions:
+            - Name: ApprovalAction
+              ActionTypeId:
+                Category: Approval
+                Owner: AWS
+                Version: '1'
+                Provider: Manual
+              RunOrder: 1
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 3514e8f9-85f4-42f1-8d33-bf4ece963a16
+    DependsOn:
+      - GitHubConn
+      - CodePipelineBucket
+      - CodeBuildProject
+    DeletionPolicy: Delete
+  ESKey:
+    Type: 'AWS::KMS::Key'
+    Properties:
+      Enabled: true
+      KeyPolicy:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: '*'
+            Action:
+              - 'kms:Encrypt'
+              - 'kms:Decrypt'
+              - 'kms:ReEncrypt*'
+              - 'kms:GenerateDataKey*'
+              - 'kms:CreateGrant'
+              - 'kms:DescribeKey'
+            Resource: '*'
+            Condition:
+              StringEquals:
+                'kms:ViaService': !Sub 'es.${AWS::Region}.amazonaws.com'
+                'kms:CallerAccount': !Ref 'AWS::AccountId'
+          - Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+            Action: '*'
+            Resource: '*'
+          - Effect: Allow
+            Principal:
+              Service: es.amazonaws.com
+            Action:
+              - 'kms:Describe*'
+              - 'kms:Get*'
+              - 'kms:List*'
+            Resource: '*'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 870ea8d4-1eb9-42ac-a45c-1687fa22b08e
+    DeletionPolicy: Delete
+  FallBackIndentFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: FallBackIndentFunction
+      Runtime: python3.9
+      MemorySize: 128
+      Timeout: 30
+      Handler: index.lambda_handler
+      Role: !GetAtt 
+        - FallBackIndentRole
+        - Arn
+      Code:
+        ZipFile: |
+          import time
+          import dateutil.parser
+          import os
+          import logging
+
+          logger = logging.getLogger()
+          logger.setLevel(logging.DEBUG)
+
+          """ --- Helpers to build responses which match the structure of the
+          necessary dialog actions --- """
+
+          def get_slots(intent_request):
+              return intent_request['currentIntent']['slots']
+
+          def close(session_attributes, fulfillment_state, message):
+
+          response = {
+                  'sessionAttributes': session_attributes,
+                  'dialogAction': {
+                      'type': 'Close',
+                      'fulfillmentState': fulfillment_state,
+                      'message': message
+                  }
+              }
+              return response
+
+          def query_to_keywords(query):
+              keywords = []
+              if "show me" in query:
+                  words = query.replace(', ', ' ')
+                  word_lists = words.split(' ')
+                  if "and" in query:
+                      and_index = word_lists.index("and")
+                      keywords.append(word_lists[and_index-1])
+                      keywords.append(word_lists[and_index+1])
+                  else:
+                      keywords.append(word_lists[-1])
+              else:
+                  word_lists = query.split(', ')
+                  keywords = word_lists
+              return keywords
+
+          """ --- Functions that control the bot's behavior --- """
+
+          def process_keywords(intent_request):
+              query = intent_request['inputTranscript']
+              keywords = query_to_keywords(query)
+              return close(intent_request['sessionAttributes'],
+                           'Fulfilled',
+                           {'contentType': 'PlainText',
+                            'content': 'processing the keywords of {}'.format(keywords)})
+
+          """ --- Intents --- """
+
+          def dispatch(intent_request):
+              logger.debug('dispatch userId={}, intentName={}'.format(intent_request['userId'], intent_request['currentIntent']['name']))
+              intent_name = intent_request['currentIntent']['name']
+              return process_keywords(intent_request)
+
+          """ --- Main handler --- """
+
+          def lambda_handler(event, context):
+              # By default, treat the user request as coming from the America/New_York time zone.
+              os.environ['TZ'] = 'America/New_York'
+              time.tzset()
+              logger.debug('event.bot.name={}'.format(event['bot']['name']))
+
+              return dispatch(event)
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 28072437-22ae-4dd3-8c7b-f4ebf2ba172f
+    DependsOn:
+      - FallBackIndentRole
+    DeletionPolicy: Delete

@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="apiGateway-js-sdk/index.js"></script>
         <script type="text/javascript" src="apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
         <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
         <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
@@ -16,11 +15,12 @@
         <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
         <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
         <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
-        <script type="module" src="apiGateway-js-sdk/apigClient.js"></script>
+        <script type="text/javascript" src="apiGateway-js-sdk/apigClient.js"></script>
+        <script src="./index.js"></script>
     </head>
     <center>
         <header class="Photos">
-            Photo Album
+            Hello World! Photo Album
         </header>
     </center>
     <body>
@@ -50,7 +50,14 @@
                     <input type="text" id="custom_labels" name="custom_labels" placeholder="Custom labels">
                 </form>
                 <button id="upload_files" onclick="uploadPhoto()">Upload</button>
+                <p id="uploadText"> </p>            
             </center>
+            <canvas id="search_image_canvas" width=1100 height=800></canvas>
         </div>
+        <script>
+
+            var sdk = apigClientFactory.newClient({});
+      
+          </script>
     </body>
 </html>
